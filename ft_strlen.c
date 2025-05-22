@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 06:50:15 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/21 07:09:58 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/05/22 10:25:49 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ int	ft_strlen(char *c)
 {
 	int	i;
 
+	i = 0;
 	while (*c)
 	{
 		i++;
@@ -21,11 +22,3 @@ int	ft_strlen(char *c)
 	}
 	return (i);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char	*test = "testingsss";
-// 	printf("%d", ft_strlen(test));
-// 	return (0);
-// }
