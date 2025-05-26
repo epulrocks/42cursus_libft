@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/21 00:27:31 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/23 12:43:43 by mabdul-r         ###   ########.fr       */
+/*   Created: 2025/05/23 15:47:20 by mabdul-r          #+#    #+#             */
+/*   Updated: 2025/05/23 15:55:40 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (ft_isalpha(c))
-		return (1);
-	else if (ft_isdigit(c))
-		return (1);
-	return (0);
+	ft_memset(s, '\0', n);
 }

@@ -6,19 +6,21 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 06:50:15 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/22 10:25:49 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/05/24 03:39:44 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *c)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (*c)
+	while (*s)
 	{
 		i++;
-		c++;
+		s++;
 	}
 	return (i);
 }

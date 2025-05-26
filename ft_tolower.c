@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/21 00:27:31 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/23 12:43:43 by mabdul-r         ###   ########.fr       */
+/*   Created: 2025/05/22 17:16:37 by mabdul-r          #+#    #+#             */
+/*   Updated: 2025/05/23 13:01:36 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+static	int	ft_isupper(int c)
 {
-	if (ft_isalpha(c))
-		return (1);
-	else if (ft_isdigit(c))
+	if (c >= 65 && c <= 90)
 		return (1);
 	return (0);
+}
+
+int	ft_tolower(int c)
+{
+	if (ft_isupper(c))
+		return (c + 32);
+	return (c);
 }
