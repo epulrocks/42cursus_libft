@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 00:24:13 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/26 15:22:09 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/05/26 19:47:01 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif
