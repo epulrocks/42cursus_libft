@@ -11,7 +11,7 @@ SRCS = \
 	ft_putendl_fd.c	ft_putnbr_fd.c\
 
 B_SRCS = \
-	ft_lstnew.c\
+	ft_lstnew.c		ft_lstadd_front.c\
 
 # Name of the static library to be created
 NAME = libft.a
@@ -46,7 +46,10 @@ CFLAGS = -Wall -Wextra -Werror
 all: ${NAME}
 
 # Include Bonus functions
-bonus: 
+bonus: ${NAME}_bonus
+
+${NAME}_bonus: ${OBJS} ${B_OBJS}
+	${AR} ${NAME} ${OBJS} ${B_OBJS}
 
 # Rule to create the static library
 # It depends on all object files being compiled

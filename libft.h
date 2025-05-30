@@ -6,13 +6,13 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 00:24:13 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/30 19:04:42 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/05/31 02:50:28 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
+// # include <stddef.h>
 # include <stdlib.h>
 # include <stdint.h>
 # include <unistd.h>
@@ -58,5 +58,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
