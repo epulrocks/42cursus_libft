@@ -7,6 +7,11 @@ SRCS = \
 	ft_strchr.c		ft_strrchr.c	ft_strncmp.c	ft_strnstr.c\
 	ft_atoi.c		ft_calloc.c		ft_strdup.c		ft_substr.c\
 	ft_strjoin.c	ft_strtrim.c	ft_split.c		ft_itoa.c\
+	ft_strmapi.c	ft_striteri.c	ft_putchar_fd.c	ft_putstr_fd.c\
+	ft_putendl_fd.c	ft_putnbr_fd.c\
+
+B_SRCS = \
+	ft_lstnew.c\
 
 # Name of the static library to be created
 NAME = libft.a
@@ -15,6 +20,7 @@ NAME = libft.a
 # This automatically changes .c to .o for each file in SRCS
 # OBJS = ft_isalpha.o ft_isdigit.o ...
 OBJS = ${SRCS:.c=.o}
+B_OBJS = ${B_SRCS:.c=.o}
 
 # Define the C compiler to use
 CC = cc
@@ -38,6 +44,9 @@ CFLAGS = -Wall -Wextra -Werror
 # Default target: builds the library
 # all: libft.a
 all: ${NAME}
+
+# Include Bonus functions
+bonus: 
 
 # Rule to create the static library
 # It depends on all object files being compiled
