@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/31 02:21:59 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/06/02 22:01:45 by mabdul-r         ###   ########.fr       */
+/*   Created: 2025/05/31 05:25:09 by mabdul-r          #+#    #+#             */
+/*   Updated: 2025/05/31 05:29:40 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*node;
+	t_list	*p;
 
-	node = (t_list *)malloc(sizeof(t_list));
-	if (node == NULL)
+	if (lst == NULL)
 		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	while (lst)
+	{
+		p = lst;
+		lst = lst->next;
+	}
+	return (p);
 }
