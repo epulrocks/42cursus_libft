@@ -6,13 +6,13 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 19:47:30 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/31 01:51:50 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/04 16:25:25 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digit(unsigned int n)
+static int	count_digit(unsigned int n)
 {
 	int	count;
 
@@ -27,7 +27,7 @@ int	count_digit(unsigned int n)
 	return (count);
 }
 
-void	backward_fill(char *str, unsigned int nbr, unsigned int count, int sign)
+static void	backward_fill(char *str, unsigned int nbr, unsigned int count, int sign)
 {
 	unsigned int	m;
 
@@ -44,7 +44,7 @@ void	backward_fill(char *str, unsigned int nbr, unsigned int count, int sign)
 	*str = '\0';
 }
 
-void	swap(char *a, char *b)
+static void	swap(char *a, char *b)
 {
 	char	temp;
 
@@ -53,7 +53,7 @@ void	swap(char *a, char *b)
 	*a = temp;
 }
 
-void	reverse_string(char *str)
+static void	reverse_string(char *str)
 {
 	size_t	size;
 	size_t	half;
@@ -71,22 +71,22 @@ void	reverse_string(char *str)
 
 char	*ft_itoa(int n)
 {
-	int		sign;
-	int		count;
-	long	nbr;
-	char	*str;
+	int				sign;
+	int				count;
+	unsigned int	nbr;
+	char			*str;
 
-	nbr = n;
-	if (nbr < 0)
+	if (n < 0)
 	{
 		sign = -1;
 		count = 1;
-		nbr *= -1;
+		nbr = n * (-1);
 	}
 	else
 	{
 		sign = 1;
 		count = 0;
+		nbr = n;
 	}
 	count += count_digit(nbr);
 	str = (char *)malloc((count + 1) * sizeof(char));

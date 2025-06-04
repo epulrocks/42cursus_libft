@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 02:47:48 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/26 11:03:06 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/04 16:16:23 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,16 @@ int	ft_atoi(const char *nptr)
 	}
 	return (n * sign);
 }
+
+// #include <stdlib.h>
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char	*str = NULL;
+
+// 	printf("%d", atoi(str));
+// 	printf("\n");
+// 	// printf("%d", ft_atoi(str));
+
+// 	return (0);
+// }

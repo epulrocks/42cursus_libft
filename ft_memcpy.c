@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 16:07:47 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/24 03:33:09 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/04 12:43:46 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+// Copy memory, not limited to dest size
+// dest and src is assumed to not overlap, no handling of overlap

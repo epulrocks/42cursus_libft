@@ -6,13 +6,13 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 17:16:37 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/23 12:53:30 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/04 04:01:51 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static	int	ft_islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (1);
 	return (0);
 }
