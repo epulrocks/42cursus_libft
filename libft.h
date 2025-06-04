@@ -6,13 +6,12 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 00:24:13 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/06/02 23:42:47 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/04 16:54:12 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-// # include <stddef.h>
 # include <stdlib.h>
 # include <stdint.h>
 # include <unistd.h>

@@ -10,7 +10,7 @@ SRCS = \
 	ft_strmapi.c		ft_striteri.c		ft_putchar_fd.c	ft_putstr_fd.c\
 	ft_putendl_fd.c		ft_putnbr_fd.c\
 
-B_SRCS = \
+BNS_SRCS = \
 	ft_lstnew.c			ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c\
 	ft_lstadd_back.c	ft_lstdelone.c		ft_lstclear.c	ft_lstiter.c\
 	ft_lstmap.c\
@@ -21,8 +21,9 @@ NAME = libft.a
 # Object files corresponding to the source files
 # This automatically changes .c to .o for each file in SRCS
 # OBJS = ft_isalpha.o ft_isdigit.o ...
+# BNS_ = BONUS_
 OBJS = ${SRCS:.c=.o}
-B_OBJS = ${B_SRCS:.c=.o}
+BNS_OBJS = ${BNS_SRCS:.c=.o}
 
 # Define the C compiler to use
 CC = cc
@@ -48,10 +49,8 @@ CFLAGS = -Wall -Wextra -Werror
 all: ${NAME}
 
 # Include Bonus functions
-bonus: ${NAME}_bonus
-
-${NAME}_bonus: ${OBJS} ${B_OBJS}
-	${AR} ${NAME} ${OBJS} ${B_OBJS}
+bonus: ${OBJS} ${BNS_OBJS}
+	${AR} ${NAME} ${OBJS} ${BNS_OBJS}
 
 # Rule to create the static library
 # It depends on all object files being compiled
@@ -67,12 +66,9 @@ ${NAME}: ${OBJS}
 ft_%.o: ft_%.c
 	${CC} ${CFLAGS} -c $< -o $@
 
-norm:
-	norminette ft_*.c libft.h
-
 # Rule to clean up object files
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${BNS_OBJS}
 
 # Rule to clean up object files and the library file
 fclean: clean
