@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 19:47:30 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/06/04 16:25:25 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/04 16:39:18 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	count_digit(unsigned int n)
 	return (count);
 }
 
-static void	backward_fill(char *str, unsigned int nbr, unsigned int count, int sign)
+static void	backfill(char *str, unsigned int nbr, unsigned int count, int sign)
 {
 	unsigned int	m;
 
@@ -92,7 +92,7 @@ char	*ft_itoa(int n)
 	str = (char *)malloc((count + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	backward_fill(str, nbr, count, sign);
+	backfill(str, nbr, count, sign);
 	reverse_string(str);
 	return (str);
 }
