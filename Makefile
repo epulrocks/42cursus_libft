@@ -31,7 +31,7 @@ CC = cc
 # Define the archiver for creating static libraries
 # r => replace/insert member files (e.g. .o) into archive file (.a).
 # c => create .a if not exist.
-# s => create index/symbol table?? TODO: Research!
+# s => create index/symbol table.
 AR = ar rcs
 
 # Define the command for removing files

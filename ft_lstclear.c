@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 23:14:04 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/06/02 23:34:40 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/12 03:18:46 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
+	if (lst == NULL || del == NULL)
+		return ;
 	while (*lst)
 	{
 		temp = (*lst)->next;

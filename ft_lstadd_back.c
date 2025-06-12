@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 05:30:53 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/06/03 12:06:14 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/12 03:17:14 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*p;
 
+	if (lst == NULL || new == NULL)
+		return ;
 	if (!*lst)
 	{
 		*lst = new;

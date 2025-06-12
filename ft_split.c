@@ -6,7 +6,7 @@
 /*   By: mabdul-r <mabdul-r@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:22:20 by mabdul-r          #+#    #+#             */
-/*   Updated: 2025/05/26 19:44:38 by mabdul-r         ###   ########.fr       */
+/*   Updated: 2025/06/12 01:40:07 by mabdul-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,6 @@ static	size_t	count_words(char const *s, char c)
 	return (word_count);
 }
 
-static	char	**alloc_array(char const *s, char c)
-{
-	size_t	word_count;
-	char	**result;
-
-	word_count = count_words(s, c);
-	result = (char **)malloc((word_count + 1) * sizeof(char *));
-	if (result == NULL)
-		return (NULL);
-	return (result);
-}
-
 static	void	split_process(char **arptr, char *ptr, char const *s, char c)
 {
 	int		word_flag;
@@ -80,15 +68,46 @@ static	void	split_process(char **arptr, char *ptr, char const *s, char c)
 	*arptr = NULL;
 }
 
+static void	free_array(char **arr, size_t size)
+{
+	size_t	i;
+
+	if (arr == NULL)
+		return ;
+	i = 0;
+	while (i < size)
+	{
+		if (arr[i] != NULL)
+		{
+			free(arr[i]);
+			arr[i] = NULL;
+		}
+		i++;
+	}
+	free(arr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	char	**arptr;
 	char	*ptr;
+	size_t	word_count;
 
-	result = alloc_array(s, c);
-	arptr = result;
+	word_count = count_words(s, c);
+	result = (char **)malloc((word_count + 1) * sizeof(char *));
+	if (result == NULL)
+		return (NULL);
 	ptr = (char *)s;
-	split_process(arptr, ptr, s, c);
+	split_process(result, ptr, s, c);
+	arptr = result;
+	while (word_count-- > 0)
+	{
+		if (*arptr++ == NULL)
+		{
+			free_array(result, word_count);
+			return (NULL);
+		}
+	}
 	return (result);
 }
